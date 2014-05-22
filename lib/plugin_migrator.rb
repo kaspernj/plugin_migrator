@@ -1,5 +1,5 @@
 require "string-cases"
-load "#{File.dirname(__FILE__)}/tasks/plugin_migrator_tasks.rake"
+load "#{File.dirname(__FILE__)}/tasks/plugin_migrator_tasks.rake" if ::Kernel.const_defined?(:Rake)
 
 module PluginMigrator
   def self.const_missing(name)
