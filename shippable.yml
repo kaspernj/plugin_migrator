@@ -3,8 +3,8 @@ rvm:
   - 2.1.2
 before_script:
   - pwd
-  - cd dummy; RAILS_ENV=test bundle exec rake db:migrate
-  - cd dummy; RAILS_ENV=test bundle exec rake plugin_migrator:migrate
+  - cd spec/dummy; RAILS_ENV=test bundle exec rake db:migrate
+  - cd spec/dummy; RAILS_ENV=test bundle exec rake plugin_migrator:migrate
 script:
   - CODECLIMATE_REPO_TOKEN=9d9161136cf4ecac499de352c59eb4f5a53396c21a6b0f9267f1c275bfe7bc49 bundle exec rspec
 notifications:
