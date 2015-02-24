@@ -4,4 +4,28 @@
 
 # PluginMigrator
 
+Run all plugin-migrations without installing them as real migrations in every app.
+
+## Install
+
+Add to your plugin's Gemfile and bundle:
+```ruby
+gem "plugin_migrator"
+```
+
+Rename the "db/migrate" to "db/plugin_migrate".
+
+## Usage
+
+Run the following rake-task to run all missing plugin-migrations:
+```
+bundle exec rake plugin_migrator:migrate
+```
+
+Do rollbacks like so:
+```
+bundle exec rake plugin_migrator:rollback
+```
+
+
 This project rocks and uses MIT-LICENSE.
